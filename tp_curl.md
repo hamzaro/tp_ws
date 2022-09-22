@@ -5,16 +5,57 @@ Pour les questions suivantes, vous devez utiliser l'url suivante : https://webho
 Pour tous les appels vous devez ajouter un header pour identifier votre appel parmis ceux des autres étudiants : x-student : VOTRE_NOM
 
 ## Faire un appel curl : copier la commande exécutée et indiquer la requête et la réponse
+curl -v --header "x-student:ZAROUKI Hamza" https://webhook.site/d4ec90aa-8173-48dd-8414-6fb832ea2a26
 
+*   Trying 46.4.105.116:443...
+* Connected to webhook.site (46.4.105.116) port 443 (#0)
+* schannel: ALPN, offering http/1.1
+* ALPN, server did not agree to a protocol
+> GET /d4ec90aa-8173-48dd-8414-6fb832ea2a26 HTTP/1.1
+> Host: webhook.site
+> User-Agent: curl/7.71.1
+> Accept: */*
+> x-student:ZAROUKI Hamza
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx
+< Content-Type: text/plain; charset=UTF-8
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< X-Request-Id: c4cef73b-79c2-45f0-a3fb-bee9c85013ad
+< X-Token-Id: d4ec90aa-8173-48dd-8414-6fb832ea2a26
+< Cache-Control: no-cache, private
+< Date: Thu, 22 Sep 2022 12:41:00 GMT
+<
+* Connection #0 to host webhook.site left intact
 
 ## Quel est la version du protocole utilisé par le serveur ?
-
+HTTP/1.1
 
 ## Quels sont les headers que l'on envoie dans la requête ? Quels sont leur sens ?
+> Accept: */*
+> Host: webhook.site
+> User-Agent: curl/7.71.1
+< HTTP/1.1 200 OK
+< Server: nginx
+< Content-Type: text/plain; charset=UTF-8
+< Vary: Accept-Encoding
+< X-Request-Id: c4cef73b-79c2-45f0-a3fb-bee9c85013ad
+< X-Token-Id: d4ec90aa-8173-48dd-8414-6fb832ea2a26
+< Cache-Control: no-cache, private
+< Date: Thu, 22 Sep 2022 12:41:00 GMT
 
+HTTP/1.1: version protocole HTTP.
+200 OK: code de statut. le serveur a reçu, compris et accepté la demande.
+Content-Type: fournit des informations sur le type de fichier.
+Cache-Control, Vary: référence à la mise en cache du fichier.
+server: désigne le logiciel du serveur Web.
+Accept: types de contenu que le client peut traiter
+Date: date et heure de la demande
 
 ## Quelles informations pouvez-vous trouver à propos du certificat SSL ?
-
+SSL certificate verify ok
 
 ## Quel est le code de la réponse ? Que signifie-t-il ?
 
