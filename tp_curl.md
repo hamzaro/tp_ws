@@ -38,7 +38,6 @@ HTTP/1.1
 > Host: webhook.site
 > User-Agent: curl/7.71.1
 < HTTP/1.1 200 OK
-< Server: nginx
 < Content-Type: text/plain; charset=UTF-8
 < Vary: Accept-Encoding
 < X-Request-Id: c4cef73b-79c2-45f0-a3fb-bee9c85013ad
@@ -58,7 +57,15 @@ Date: date et heure de la demande
 SSL certificate verify ok
 
 ## Quel est le code de la réponse ? Que signifie-t-il ?
+< Server: nginx
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+> GET /d4ec90aa-8173-48dd-8414-6fb832ea2a26 HTTP/1.1
 
+server: Identification du serveur
+vary: Indique quels champs d’en-tête doivent être considérés comme variables si un fichier est demandé dans le cache
+Transfer-Encoding: Méthode de compression
+GET: allow: Types de demandes autorisées pour une ressource spécifique
 
 ## Quels headers recevez vous dans la response ? Quels sont leur sens ?
 
